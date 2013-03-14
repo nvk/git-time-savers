@@ -15,9 +15,8 @@ gifu(){
 
 ## Open gihub project and opens gihub issues page ##
 gop(){
-	#url=$(git remote -v | perl -n -e 'm{:(.+?).git} && print $1,"\n"' | uniq );
-	#open "http://github.com/$url"
-	open `git remote -v | sed 's/^.*:/http:\/\/github.com\//' | sed 's/.git .*//' | head -1`
+	url=$(git remote -v | perl -n -e 'm{:(.+?).git} && print $1,"\n"' | uniq );
+	open "http://github.com/$url"
 }
 gip(){
 	url=$(git remote -v | perl -n -e 'm{:(.+?).git} && print $1,"\n"' | uniq );
